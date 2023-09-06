@@ -54,7 +54,7 @@ class RequestManager {
     return contents;
   }
 
-  Future<Map<dynamic, dynamic>> _getMap(
+  Future<Map<dynamic, dynamic>> getMap(
       String path, Map<String, String> parameters) async {
     // 最初の階層がMap形式のAPIを呼び出す．
     http.Response resp = await _get(path, parameters);
