@@ -17,6 +17,8 @@ class RequestManager {
   String _serverAddress = "";
 
   set serverAddress(String serverAddress) {
+    // TODO: アドレスが正しいかバリデーション
+    // TODO: 末尾にスラッシュがついていたら削除
     _serverAddress = serverAddress;
   }
 

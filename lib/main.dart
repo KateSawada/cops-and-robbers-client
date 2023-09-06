@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'utils/footer.dart';
 import 'utils/initialize.dart';
@@ -7,7 +6,6 @@ import 'utils/request.dart';
 
 void main() async {
   await Initializer.initialize();
-  RequestManager().serverAddress = dotenv.env['SERVER_ADDRESS']!;
   runApp(const MyApp());
 }
 
@@ -49,6 +47,13 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ElevatedButton(
+              child: const Text("サーバーを決定"),
+              onPressed: () {
+                // TODO: サーバーアドレス入力
+                RequestManager().serverAddress = "ADDRESS";
+              },
+            ),
             ElevatedButton(
               child: const Text("ルームを作成"),
               onPressed: () {
