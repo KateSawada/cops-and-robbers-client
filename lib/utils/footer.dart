@@ -33,7 +33,7 @@ class RootWidgetState extends State<RootWidget> {
     '逮捕',
   ];
 
-  static const List<Widget> _routes = [
+  static final List<Widget> _routes = [
     HomePage(),
     MapPage(),
     ChatPage(),
