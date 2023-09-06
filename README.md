@@ -2,6 +2,9 @@
 
 A new Flutter project.
 
+# 動作環境
+Flutter 3.12.2
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
