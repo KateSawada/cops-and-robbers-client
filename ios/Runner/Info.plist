@@ -2,6 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<!-- geolocator Section -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Required to get location information to play game based on location.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Required to get location information to play game based on location..</string>
+	<!-- End of the geolocator Section -->
+
 	<key>CADisableMinimumFrameDurationOnPhone</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
