@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
+import '../widgets/marker.dart';
 
 class MapPage extends StatefulWidget {
   @override
@@ -37,32 +38,14 @@ class _MapAppState extends State<MapPage> {
             MarkerLayer(
               markers: [
                 Marker(
-                  width: 80,
-                  height: 80,
-                  point: const LatLng(51.5, -0.09),
-                  builder: (ctx) => const FlutterLogo(
-                    textColor: Colors.blue,
-                    key: ObjectKey(Colors.blue),
-                  ),
-                ),
-                Marker(
-                  width: 80,
-                  height: 80,
-                  point: const LatLng(53.3498, -6.2603),
-                  builder: (ctx) => const FlutterLogo(
-                    textColor: Colors.green,
-                    key: ObjectKey(Colors.green),
-                  ),
-                ),
-                Marker(
-                  width: 80,
-                  height: 80,
-                  point: const LatLng(48.8566, 2.3522),
-                  builder: (ctx) => const FlutterLogo(
-                    textColor: Colors.purple,
-                    key: ObjectKey(Colors.purple),
-                  ),
-                ),
+                    width: 32,
+                    height: 32,
+                    point: const LatLng(48.8566, 2.3522),
+                    builder: (ctx) => PersonMarkerButton(
+                          radius: 16,
+                          onPressed: () {},
+                          backGroundColor: Colors.red,
+                        ))
               ],
             ),
           ],
