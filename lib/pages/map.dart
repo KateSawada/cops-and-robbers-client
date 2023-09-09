@@ -18,15 +18,7 @@ class _MapAppState extends State<MapPage> {
   @override
   void initState() {
     super.initState();
-    marker = Marker(
-        width: 32,
-        height: 32,
-        point: nagoyaLatLng,
-        builder: (ctx) => PersonMarkerButton(
-              radius: 16,
-              onPressed: randomWarp,
-              backGroundColor: Colors.red,
-            ));
+    marker = getMarkerButton(nagoyaLatLng, 32, Colors.red, randomWarp);
   }
 
   double _randomDoubleWithRange(double min, double max) {
@@ -41,15 +33,7 @@ class _MapAppState extends State<MapPage> {
         nagoyaLatLng.longitude + _randomDoubleWithRange(-0.01, 0.01));
 
     setState(() {
-      marker = Marker(
-          width: 32,
-          height: 32,
-          point: newLatLng,
-          builder: (ctx) => PersonMarkerButton(
-                radius: 16,
-                onPressed: randomWarp,
-                backGroundColor: Colors.red,
-              ));
+      marker = getMarkerButton(newLatLng, 32, Colors.red, randomWarp);
     });
   }
 
