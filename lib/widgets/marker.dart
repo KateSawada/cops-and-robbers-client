@@ -3,17 +3,38 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
 Marker getMarkerButton(LatLng point, double radius, Color backGroundColor,
-    VoidCallback onPressed) {
+    String text, VoidCallback onPressed) {
   return Marker(
       point: point,
-      width: radius,
-      height: radius,
-      builder: (ctx) => FloatingActionButton(
-            child: Icon(
-              Icons.person,
-              color: Colors.white,
-            ),
-            onPressed: onPressed,
-            backgroundColor: backGroundColor,
+      width: radius + 40,
+      height: radius + 40,
+      builder: (ctx) => Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(
+                height: radius,
+                width: radius,
+                child: FloatingActionButton(
+                  onPressed: onPressed,
+                  backgroundColor: backGroundColor,
+                  child: const Icon(
+                    Icons.person,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+              Container(
+                // color: backGroundColor,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(4),
+                  color: backGroundColor,
+                ),
+                padding: EdgeInsets.all(4),
+                child: Text(
+                  text,
+                  style: TextStyle(color: Colors.white),
+                ),
+              )
+            ],
           ));
 }

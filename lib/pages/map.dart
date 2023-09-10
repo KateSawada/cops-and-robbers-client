@@ -18,14 +18,15 @@ class _MapAppState extends State<MapPage> {
   LatLng nagoyaLatLng = const LatLng(35.1814, 136.9063);
   late Marker marker;
 
-  late Marker myCurrentMarker =
-      getMarkerButton(const LatLng(35.1814, 136.9063), 32, Colors.green, () {});
+  late Marker myCurrentMarker = getMarkerButton(
+      const LatLng(35.1814, 136.9063), 32, Colors.green, "", () {});
   late LatLng myCurrentLatLng;
 
   @override
   void initState() {
     super.initState();
-    marker = getMarkerButton(nagoyaLatLng, 32, Colors.red, randomWarp);
+    marker =
+        getMarkerButton(nagoyaLatLng, 32, Colors.red, "NAGOYA", randomWarp);
 
     Future(() async {
       await setCurrentPositionMarker();
@@ -45,7 +46,7 @@ class _MapAppState extends State<MapPage> {
         nagoyaLatLng.longitude + _randomDoubleWithRange(-0.01, 0.01));
 
     setState(() {
-      marker = getMarkerButton(newLatLng, 32, Colors.red, randomWarp);
+      marker = getMarkerButton(newLatLng, 32, Colors.red, "NAGOYA", randomWarp);
     });
   }
 
@@ -88,7 +89,8 @@ class _MapAppState extends State<MapPage> {
     setState(() {
       // marker位置更新
       myCurrentLatLng = LatLng(latitude, longitude);
-      myCurrentMarker = getMarkerButton(myCurrentLatLng, 32, Colors.green, () {
+      myCurrentMarker =
+          getMarkerButton(myCurrentLatLng, 32, Colors.green, "me", () {
         print("update current position");
       });
     });
