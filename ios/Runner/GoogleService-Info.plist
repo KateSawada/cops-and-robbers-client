@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBmgWUAqN9-TWe2gdgg2uAxGh-9dvoUQaI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>524060994609</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.sawapy0630h12.copsAndRobbersClient</string>
+	<key>PROJECT_ID</key>
+	<string>jack-cops-and-rubbers-dev</string>
+	<key>STORAGE_BUCKET</key>
+	<string>jack-cops-and-rubbers-dev.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:524060994609:ios:3ef771dfeadc7acfbff910</string>
+</dict>
+</plist>

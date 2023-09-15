@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "524060994609",
+    "project_id": "jack-cops-and-rubbers-dev",
+    "storage_bucket": "jack-cops-and-rubbers-dev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524060994609:android:864193f069088546bff910",
+        "android_client_info": {
+          "package_name": "com.example.cops_and_robbers_client"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiQAW-jr0MQUsjGHNLrq69-ISAuZgYn98"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
