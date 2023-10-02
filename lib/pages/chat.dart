@@ -15,7 +15,7 @@ class ChatPage extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Text("チャット画面"),
+      home: const Text("チャット画面です"),
     );
   }
 }
