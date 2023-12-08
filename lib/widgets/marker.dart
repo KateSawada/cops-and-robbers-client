@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'dart:math';
 import 'package:latlong2/latlong.dart';
 
 Marker getMarkerButton(LatLng point, double radius, Color backGroundColor,
     String text, VoidCallback onPressed) {
   return Marker(
       point: point,
-      width: radius + 40,
-      height: radius + 40,
+      width: max(12.5 * text.length, radius),
+      height: radius + 42,
       builder: (ctx) => Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -24,15 +25,21 @@ Marker getMarkerButton(LatLng point, double radius, Color backGroundColor,
                 ),
               ),
               Container(
+                alignment: Alignment.center,
+                width: 200,
+                // height: 40,
                 // color: backGroundColor,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(4),
                   color: backGroundColor,
                 ),
-                padding: EdgeInsets.all(4),
+                padding: const EdgeInsets.all(4),
                 child: Text(
                   text,
-                  style: TextStyle(color: Colors.white),
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 12,
+                  ),
                 ),
               )
             ],

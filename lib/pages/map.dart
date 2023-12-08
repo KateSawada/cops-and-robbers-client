@@ -21,6 +21,9 @@ class _MapAppState extends State<MapPage> {
   late Marker myCurrentMarker = getMarkerButton(
       const LatLng(35.1814, 136.9063), 32, Colors.green, "", () {});
   late LatLng myCurrentLatLng;
+  late Marker dummyCurrentMarker = getMarkerButton(
+      const LatLng(35.1814, 136.9063), 32, Colors.green, "", () {});
+  late LatLng dummyCurrentLatLng;
 
   @override
   void initState() {
@@ -93,6 +96,11 @@ class _MapAppState extends State<MapPage> {
           getMarkerButton(myCurrentLatLng, 32, Colors.green, "me", () {
         print("update current position");
       });
+      dummyCurrentLatLng = LatLng(latitude + 0.01, longitude + 0.01);
+      dummyCurrentMarker =
+          getMarkerButton(dummyCurrentLatLng, 32, Colors.blue, "あいうえおかきく", () {
+        print("update current position");
+      });
     });
   }
 
@@ -121,7 +129,7 @@ class _MapAppState extends State<MapPage> {
               userAgentPackageName: 'dev.fleaflet.flutter_map.example',
             ),
             MarkerLayer(
-              markers: [marker, myCurrentMarker],
+              markers: [marker, myCurrentMarker, dummyCurrentMarker],
             ),
           ],
         ),
